@@ -4,7 +4,6 @@
     "scheme": "aora",
     "slug": "aora",
     "version": "1.0.0",
-    "sdkVersion": "XX.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -22,7 +21,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package":"com.rn.aora"
+      "package": "com.rn.aora"
     },
     "web": {
       "bundler": "metro",
@@ -30,6 +29,14 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "faeddf83-a3f2-4507-be24-136318f70ba5"
+      }
+    }
   }
 }
