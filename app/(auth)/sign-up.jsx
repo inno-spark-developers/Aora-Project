@@ -10,12 +10,12 @@ import { useGlobalContext } from "../../context/GlobalProvider";
 
 const SignUp = () => {
   const [form, setForm] = useState({
-    email: '',
-    password: '',
-    username: '',
+    email: "",
+    password: "",
+    username: "",
   });
 
-  const { setUser , setIsLogged} = useGlobalContext()
+  const { setUser , setIsLoggedIn} = useGlobalContext()
  
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -29,7 +29,7 @@ const SignUp = () => {
     try {
       const result = await createUser(form.email, form.password, form.username);
       setUser(result)
-      setIsLogged(true)
+      setIsLoggedIn(true)
       Alert.alert("Success", "User created successfully");
       // set it to global state
 
